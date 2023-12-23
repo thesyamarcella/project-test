@@ -1,0 +1,119 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header.hidden {
+  background-color: rgba(255, 165, 0, 0.9);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Tambahkan padding */
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.menu a:hover,
+.menu a.active {
+  border-bottom-color: white;
+}
+
+.banner {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+
+.list-post {
+  margin: 2rem;
+}
+
+.list-post h2 {
+  margin-bottom: 1rem;
+}
+
+.list-post ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-post li {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+}
+
+.list-post img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.post-details {
+  flex-grow: 1;
+}
+
+.post-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.post-details p {
+  margin: 0;
+}
